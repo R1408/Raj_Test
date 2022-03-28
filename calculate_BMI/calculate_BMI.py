@@ -24,7 +24,7 @@ def calculate_BMI(input_data):
                 count += 1
         print(f"Total person of overweight: {count}")
         csv_write = pd.DataFrame(persons_data, columns=headers)
-        csv_write.to_csv("{}/op.csv".format(path), index=False)
+        csv_write.to_csv("{}/BMI.csv".format(path), index=False)
         return {"result": True, "message": "Information are successfully generated in CSV file"}
     except Exception as e:
         return {"result": False, "message": "Error {} occur during calculating the BMI".format(e)}
